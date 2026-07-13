@@ -219,6 +219,26 @@
   stroke-linejoin: round;
 }
 
+.privacyVisual {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloudImage {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+}
+
+.privacyIcon {
+  background: linear-gradient(135deg, rgba(88, 112, 245, 0.12), rgba(23, 211, 207, 0.1));
+  color: $color-primary;
+}
+
 @include tablet {
   .row {
     gap: 48px;
@@ -300,7 +320,8 @@
   .visualPlaceholder,
   .featureContent,
   .invoiceVisual,
-  .timesheetsVisual {
+  .timesheetsVisual,
+  .privacyVisual {
     flex: none;
     width: 100%;
     max-width: none;
