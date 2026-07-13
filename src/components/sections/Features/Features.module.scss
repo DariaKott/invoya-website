@@ -239,6 +239,27 @@
   color: $color-primary;
 }
 
+.nativeVisual {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nativeImage {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nativeIcon {
+  background: linear-gradient(135deg, rgba(23, 211, 207, 0.16), rgba(89, 178, 255, 0.1));
+  color: #159f9b;
+}
+
 @include tablet {
   .row {
     gap: 48px;
@@ -290,6 +311,10 @@
     width: 25%;
     max-width: 130px;
   }
+
+  .nativeImage {
+    max-width: 560px;
+  }
 }
 
 @include mobile {
@@ -321,7 +346,8 @@
   .featureContent,
   .invoiceVisual,
   .timesheetsVisual,
-  .privacyVisual {
+  .privacyVisual,
+  .nativeVisual {
     flex: none;
     width: 100%;
     max-width: none;
@@ -377,6 +403,10 @@
     bottom: -14px;
     width: 28%;
     max-width: 128px;
+  }
+
+  .nativeImage {
+    max-width: 520px;
   }
 }
 
@@ -469,6 +499,14 @@
     width: 29%;
     max-width: 104px;
     border-radius: 22px;
+  }
+
+  .nativeVisual {
+    padding-inline: 8px;
+  }
+
+  .nativeImage {
+    max-width: 100%;
   }
 }
 

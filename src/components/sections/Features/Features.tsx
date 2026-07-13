@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container/Container";
 
 import { InvoiceFeature } from "./InvoiceFeature";
+import { NativeAppFeature } from "./NativeAppFeature";
 import { PrivacyFeature } from "./PrivacyFeature";
 import { TimesheetsFeature } from "./TimesheetsFeature";
 
@@ -14,11 +15,7 @@ export function Features() {
           <InvoiceFeature />
           <TimesheetsFeature />
           <PrivacyFeature />
-
-          <section className={`${styles.row} ${styles.reverse}`}>
-            <div className={styles.contentPlaceholder}></div>
-            <div className={styles.visualPlaceholder}></div>
-          </section>
+          <NativeAppFeature />
         </div>
       </Container>
     </section>
