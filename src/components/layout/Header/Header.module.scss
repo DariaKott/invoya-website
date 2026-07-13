@@ -13,6 +13,7 @@
     border-color 0.25s ease,
     box-shadow 0.25s ease,
     backdrop-filter 0.25s ease;
+    padding-top: env(safe-area-inset-top);
 }
 
 .scrolled {
