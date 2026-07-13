@@ -1,0 +1,60 @@
+import Image from "next/image";
+
+import { Container } from "@/components/ui/Container/Container";
+
+import styles from "./Hero.module.scss";
+
+export function Hero() {
+  return (
+    <section className={styles.hero}>
+      <Container>
+        <div className={styles.inner}>
+          <div className={styles.content}>
+            <p className={styles.eyebrow}>Invoicing without the headache</p>
+
+            <h1 className={styles.title}>Invoicing without the headache</h1>
+
+            <p className={styles.description}>
+              A native invoicing and time-tracking app for Mac, iPhone and iPad.
+              Create invoices, track billable hours, and turn your timesheets
+              into bills — with no account, no signup and no tracking.
+            </p>
+
+            <div className={styles.storeLinks} id="download">
+              <a
+                className={styles.storeLink}
+                href="#"
+                aria-label="Download Invoya for iPhone and iPad on the App Store"
+              >
+                <span className={styles.storeLabel}>Download on the</span>
+                <span className={styles.storeName}>App Store</span>
+              </a>
+
+              <a
+                className={styles.storeLink}
+                href="#"
+                aria-label="Download Invoya for Mac on the Mac App Store"
+              >
+                <span className={styles.storeLabel}>Download on the</span>
+                <span className={styles.storeName}>Mac App Store</span>
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.visual} aria-hidden="true">
+            <div className={styles.visualFrame}>
+              <Image
+                className={styles.visualImage}
+                src="/images/devices/hero-devices.webp"
+                alt=""
+                width={1536}
+                height={1024}
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

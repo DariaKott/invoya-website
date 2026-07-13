@@ -1,0 +1,365 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.features {
+  position: relative;
+  z-index: 2;
+  margin-top: -72px;
+  padding-bottom: 120px;
+}
+
+.panel {
+  overflow: hidden;
+  border: 1px solid rgba(16, 24, 47, 0.06);
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 32px 80px rgba(16, 24, 47, 0.08),
+    0 8px 24px rgba(16, 24, 47, 0.05);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.row {
+  display: flex;
+  min-height: 430px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 72px;
+  padding: 72px;
+}
+
+.row + .row {
+  border-top: 1px solid rgba(16, 24, 47, 0.06);
+}
+
+.invoiceRow {
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.contentPlaceholder {
+  flex: 0 0 36%;
+  min-width: 0;
+  max-width: 380px;
+  height: 220px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(88, 112, 245, 0.08), rgba(55, 211, 207, 0.08));
+}
+
+.visualPlaceholder {
+  flex: 1;
+  min-width: 0;
+  height: 320px;
+  border: 1px solid rgba(16, 24, 47, 0.06);
+  border-radius: 24px;
+  background: #f8f9fc;
+}
+
+.featureContent {
+  flex: 0 0 34%;
+  min-width: 0;
+  max-width: 390px;
+  transform: translateY(-12px);
+}
+
+.featureHeading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.featureIcon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(88, 112, 245, 0.14), rgba(146, 103, 255, 0.08));
+  color: $color-primary;
+}
+
+.featureIconSymbol {
+  width: 26px;
+  height: 26px;
+}
+
+.featureTitle {
+  max-width: 280px;
+  margin: 2px 0 0;
+  color: $color-text;
+  font-family: $font-heading;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.featureDescription {
+  max-width: 370px;
+  margin: 24px 0 0 72px;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.invoiceVisual {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 344px;
+}
+
+.ipadImageWrapper {
+  position: absolute;
+  inset: 8px 82px 8px 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f7f8fb;
+  box-shadow:
+    0 26px 60px rgba(16, 24, 47, 0.12),
+    0 6px 18px rgba(16, 24, 47, 0.06);
+}
+
+.ipadImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.iphoneImageWrapper {
+  position: absolute;
+  right: 18px;
+  bottom: -26px;
+  z-index: 2;
+  width: 27%;
+  min-width: 120px;
+  max-width: 160px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow:
+    0 24px 50px rgba(16, 24, 47, 0.18),
+    0 6px 16px rgba(16, 24, 47, 0.08);
+}
+
+.iphoneImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@include tablet {
+  .row {
+    gap: 48px;
+    padding: 56px;
+  }
+
+  .invoiceRow {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+
+  .featureContent {
+    flex-basis: 38%;
+    transform: translateY(-10px);
+  }
+
+  .featureTitle {
+    font-size: 26px;
+  }
+
+  .featureDescription {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .invoiceVisual {
+    height: 306px;
+  }
+
+  .ipadImageWrapper {
+    inset: 7px 66px 7px 0;
+  }
+
+  .iphoneImageWrapper {
+    right: 12px;
+    bottom: -22px;
+    max-width: 150px;
+  }
+}
+
+@include mobile {
+  .features {
+    margin-top: -28px;
+    padding-bottom: 64px;
+  }
+
+  .panel {
+    border-radius: 28px;
+  }
+
+  .row,
+  .reverse {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    min-height: auto;
+    padding: 40px 24px;
+  }
+
+  .invoiceRow {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .contentPlaceholder,
+  .visualPlaceholder,
+  .featureContent,
+  .invoiceVisual {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .contentPlaceholder {
+    height: 180px;
+  }
+
+  .visualPlaceholder {
+    height: 240px;
+  }
+
+  .featureHeading {
+    align-items: flex-start;
+  }
+
+  .featureContent {
+    transform: none;
+  }
+
+  .featureDescription {
+    margin-left: 0;
+  }
+
+  .invoiceVisual {
+    height: 314px;
+  }
+
+  .ipadImageWrapper {
+    inset: 8px 54px 8px 0;
+  }
+
+  .iphoneImageWrapper {
+    right: 10px;
+    bottom: -20px;
+    width: 30%;
+    min-width: 0;
+    max-width: 136px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    margin-top: 0;
+    padding-bottom: 48px;
+  }
+
+  .panel {
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .row,
+  .reverse {
+    padding: 36px 0;
+  }
+
+  .invoiceRow {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .row + .row {
+    border-top: 1px solid rgba(16, 24, 47, 0.08);
+  }
+
+  .contentPlaceholder {
+    height: 160px;
+    border-radius: 16px;
+  }
+
+  .visualPlaceholder {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .featureHeading {
+    gap: 14px;
+  }
+
+  .featureIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .featureTitle {
+    font-size: 24px;
+  }
+
+  .featureDescription {
+    font-size: 15px;
+  }
+
+  .invoiceVisual {
+    height: 266px;
+  }
+
+  .ipadImageWrapper {
+    inset: 7px 42px 7px 0;
+    border-radius: 18px;
+  }
+
+  .iphoneImageWrapper {
+    right: 6px;
+    bottom: -16px;
+    width: 31%;
+    max-width: 114px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  .row,
+  .reverse {
+    gap: 24px;
+    padding-block: 32px;
+  }
+
+  .invoiceRow {
+    padding-block: 26px;
+  }
+
+  .contentPlaceholder {
+    height: 145px;
+  }
+
+  .visualPlaceholder {
+    height: 200px;
+  }
+}
