@@ -1,0 +1,41 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.footer {
+  border-top: 1px solid $color-border;
+  background: $color-background;
+}
+
+.inner {
+  display: flex;
+  min-height: 96px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  @include mobile {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
+
+.copy {
+  color: $color-text-secondary;
+  font-size: 14px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: $color-text-secondary;
+  font-size: 14px;
+
+  a:hover,
+  a:focus-visible {
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,19 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.container {
+  width: 100%;
+  max-width: calc($container-width + ($container-padding-desktop * 2));
+  margin: 0 auto;
+  padding: 0 $container-padding-desktop;
+
+  @include tablet {
+    max-width: calc($container-width + ($container-padding-tablet * 2));
+    padding: 0 $container-padding-tablet;
+  }
+
+  @include mobile {
+    max-width: calc($container-width + ($container-padding-mobile * 2));
+    padding: 0 $container-padding-mobile;
+  }
+}

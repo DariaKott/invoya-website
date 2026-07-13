@@ -1,0 +1,46 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.main {
+  min-height: 560px;
+}
+
+.intro {
+  max-width: 760px;
+  padding: 96px 0 120px;
+
+  h1 {
+    color: $color-text;
+    font-size: 56px;
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin-top: 24px;
+    color: $color-text-secondary;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  @include tablet {
+    padding: 80px 0 96px;
+
+    h1 {
+      font-size: 44px;
+    }
+  }
+
+  @include mobile {
+    padding: 56px 0 72px;
+
+    h1 {
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins";
+@use "@/styles/reset";
+
+body {
+  min-width: 320px;
+  background: $color-background;
+  color: $color-text;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  background: $color-background;
+}
+
+::selection {
+  background: $color-accent;
+  color: $color-text;
+}
