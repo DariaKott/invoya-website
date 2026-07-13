@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
+    "build:github": "GITHUB_PAGES=true next build --webpack",
     "lint": "eslint ."
   },
   "dependencies": {

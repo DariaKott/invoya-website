@@ -8,6 +8,8 @@ import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./Header.module.scss";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -31,7 +33,7 @@ export function Header() {
         <div className={styles.inner}>
           <Link className={styles.logo} href="/" aria-label="Invoya home">
             <Image
-              src="/images/logo/logo-header.svg"
+              src={`${basePath}/images/logo/logo-header.svg`}
               alt="Invoya"
               width={650}
               height={560}

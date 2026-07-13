@@ -4,6 +4,8 @@ import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./Hero.module.scss";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Hero() {
   return (
     <section className={styles.hero}>
@@ -45,7 +47,7 @@ export function Hero() {
             <div className={styles.visualFrame}>
               <Image
                 className={styles.visualImage}
-                src="/images/devices/hero-devices.webp"
+                src={`${basePath}/images/devices/hero-devices.webp`}
                 alt=""
                 width={1536}
                 height={1024}

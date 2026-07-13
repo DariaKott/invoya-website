@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./Footer.module.scss";
@@ -10,7 +12,7 @@ export function Footer() {
 
         <nav className={styles.nav} aria-label="Footer navigation">
           <a href="#">Support</a>
-          <a href="/privacy/">Privacy</a>
+          <Link href="/privacy/">Privacy</Link>
         </nav>
       </Container>
     </footer>

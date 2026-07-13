@@ -4,6 +4,8 @@ import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./Features.module.scss";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 function FeatureRow({ reverse = false }: { reverse?: boolean }) {
   const rowClassName = reverse ? `${styles.row} ${styles.reverse}` : styles.row;
 
@@ -61,7 +63,7 @@ function InvoiceFeatureRow() {
       <div className={styles.invoiceVisual}>
         <div className={styles.ipadImageWrapper}>
           <Image
-            src="/images/screenshots/ipad_invoice_detail.png"
+            src={`${basePath}/images/screenshots/ipad_invoice_detail.png`}
             alt="Invoya invoice editor on iPad"
             width={2048}
             height={2732}
@@ -71,7 +73,7 @@ function InvoiceFeatureRow() {
 
         <div className={styles.iphoneImageWrapper}>
           <Image
-            src="/images/screenshots/iphone_invoice_detail.png"
+            src={`${basePath}/images/screenshots/iphone_invoice_detail.png`}
             alt="Invoya invoice editor on iPhone"
             width={1320}
             height={2868}
