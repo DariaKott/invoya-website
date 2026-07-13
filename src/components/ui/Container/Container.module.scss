@@ -4,16 +4,14 @@
 .container {
   width: 100%;
   max-width: calc($container-width + ($container-padding-desktop * 2));
-  margin: 0 auto;
-  padding: 0 $container-padding-desktop;
+  margin-inline: auto;
+  padding-inline: $container-padding-desktop;
 
   @include tablet {
-    max-width: calc($container-width + ($container-padding-tablet * 2));
-    padding: 0 $container-padding-tablet;
+    padding-inline: $container-padding-tablet;
   }
 
   @include mobile {
-    max-width: calc($container-width + ($container-padding-mobile * 2));
-    padding: 0 $container-padding-mobile;
+    padding-inline: $container-padding-mobile;
   }
 }
