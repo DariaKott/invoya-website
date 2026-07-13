@@ -260,6 +260,62 @@
   color: #159f9b;
 }
 
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 72px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.ctaTitle {
+  margin: 0 0 16px;
+  color: $color-text;
+  font-family: $font-heading;
+  font-size: clamp(28px, 2vw, 34px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.ctaDescription {
+  max-width: 560px;
+  margin: 0 0 28px;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ctaButton:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.ctaBadge {
+  display: block;
+  width: auto;
+  height: 48px;
+}
+
 @include tablet {
   .row {
     gap: 48px;
@@ -314,6 +370,10 @@
 
   .nativeImage {
     max-width: 560px;
+  }
+
+  .ctaSection {
+    padding-top: 56px;
   }
 }
 
@@ -407,6 +467,15 @@
 
   .nativeImage {
     max-width: 520px;
+  }
+
+  .ctaSection {
+    padding-top: 48px;
+    padding-bottom: 8px;
+  }
+
+  .ctaDescription {
+    max-width: 340px;
   }
 }
 

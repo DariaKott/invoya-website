@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container/Container";
 
+import { CTAFeature } from "./CTAFeature";
 import { InvoiceFeature } from "./InvoiceFeature";
 import { NativeAppFeature } from "./NativeAppFeature";
 import { PrivacyFeature } from "./PrivacyFeature";
@@ -16,6 +17,7 @@ export function Features() {
           <TimesheetsFeature />
           <PrivacyFeature />
           <NativeAppFeature />
+          <CTAFeature />
         </div>
       </Container>
     </section>
