@@ -95,50 +95,29 @@
 
 .storeLinks {
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
   align-items: center;
-  margin-top: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
 }
 
 .storeLink {
   display: inline-flex;
-  min-width: 158px;
-  min-height: 50px;
-  flex-direction: column;
-  justify-content: center;
-  padding: 7px 16px 8px;
-  border-radius: 10px;
-  background: #000000;
-  color: #ffffff;
-  line-height: 1;
+  flex-shrink: 0;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease,
     opacity 0.2s ease;
 }
 
 .storeLink:hover {
-  box-shadow: 0 8px 20px rgba(16, 24, 47, 0.18);
-  transform: translateY(-1px);
+  opacity: 0.92;
+  transform: translateY(-2px);
 }
 
-.storeLink:focus-visible {
-  outline: 3px solid rgba(88, 112, 245, 0.35);
-  outline-offset: 3px;
-}
-
-.storeLabel {
-  margin-bottom: 3px;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.storeName {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+.storeBadge {
+  display: block;
+  width: auto;
+  height: 52px;
 }
 
 .visualFrame {
@@ -193,16 +172,6 @@
 
   .storeLinks {
     margin-top: 26px;
-  }
-
-  .storeLink {
-    min-width: 146px;
-    min-height: 46px;
-    padding-inline: 14px;
-  }
-
-  .storeName {
-    font-size: 16px;
   }
 
   .visualFrame {
@@ -265,14 +234,8 @@
     margin-top: 28px;
   }
 
-  .storeLink {
-    min-width: 144px;
-    min-height: 46px;
-    padding: 7px 13px;
-  }
-
-  .storeName {
-    font-size: 16px;
+  .storeBadge {
+    height: 46px;
   }
 
   .visualFrame {
@@ -292,19 +255,6 @@
 
   .storeLinks {
     align-items: flex-start;
-  }
-
-  .storeLink {
-    min-width: 136px;
-    padding-inline: 11px;
-  }
-
-  .storeLabel {
-    font-size: 9px;
-  }
-
-  .storeName {
-    font-size: 15px;
   }
 
   .visual {

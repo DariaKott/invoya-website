@@ -24,21 +24,31 @@ export function Hero() {
 
             <div className={styles.storeLinks} id="download">
               <a
-                className={styles.storeLink}
                 href="#"
+                className={styles.storeLink}
                 aria-label="Download Invoya for iPhone and iPad on the App Store"
               >
-                <span className={styles.storeLabel}>Download on the</span>
-                <span className={styles.storeName}>App Store</span>
+                <Image
+                  src={`${basePath}/images/badges/app-store-badge.svg`}
+                  alt="Download on the App Store"
+                  width={168}
+                  height={56}
+                  className={styles.storeBadge}
+                />
               </a>
 
               <a
-                className={styles.storeLink}
                 href="#"
+                className={styles.storeLink}
                 aria-label="Download Invoya for Mac on the Mac App Store"
               >
-                <span className={styles.storeLabel}>Download on the</span>
-                <span className={styles.storeName}>Mac App Store</span>
+                <Image
+                  src={`${basePath}/images/badges/mac-app-store-badge.svg`}
+                  alt="Download on the Mac App Store"
+                  width={190}
+                  height={56}
+                  className={styles.storeBadge}
+                />
               </a>
             </div>
           </div>
