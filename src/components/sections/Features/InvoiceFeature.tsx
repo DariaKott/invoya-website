@@ -6,7 +6,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function InvoiceFeature() {
   return (
-    <section className={`${styles.row} ${styles.invoiceRow}`}>
+    <section className={`${styles.row} ${styles.invoiceRow}`} id="screenshots">
       <div className={styles.featureContent}>
         <div className={styles.featureHeading}>
           <div className={styles.featureIcon} aria-hidden="true">

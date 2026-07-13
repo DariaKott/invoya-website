@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Container } from "@/components/ui/Container/Container";
@@ -10,8 +11,35 @@ import styles from "./Header.module.scss";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
+const sectionLinks = [
+  {
+    label: "Features",
+    hash: "features",
+  },
+];
+
+const pageLinks = [
+  {
+    label: "Support",
+    href: "/support/",
+  },
+  {
+    label: "Privacy",
+    href: "/privacy/",
+  },
+];
+
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const normalizedPathname =
+    basePath && pathname.startsWith(basePath)
+      ? pathname.slice(basePath.length) || "/"
+      : pathname;
+  const isLandingPage = normalizedPathname === "/";
+
+  const getSectionHref = (hash: string) =>
+    isLandingPage ? `#${hash}` : `/#${hash}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,14 +71,31 @@ export function Header() {
           </Link>
 
           <nav className={styles.nav} aria-label="Main navigation">
-            <a href="#features">Features</a>
-            <a href="#screenshots">Screenshots</a>
-            <Link href="/privacy/">Privacy</Link>
+            {sectionLinks.map((link) => (
+              <Link key={link.hash} href={getSectionHref(link.hash)}>
+                {link.label}
+              </Link>
+            ))}
+
+            {pageLinks.map((link) => {
+              const isActive = normalizedPathname === link.href;
+
+              return (
+                <Link
+                  key={link.href}
+                  className={isActive ? styles.active : undefined}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
-          <a className={styles.downloadLink} href="#download">
+          <Link className={styles.downloadLink} href={getSectionHref("download")}>
             Download
-          </a>
+          </Link>
         </div>
       </Container>
     </header>

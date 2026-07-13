@@ -6,7 +6,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function CTAFeature() {
   return (
-    <section className={styles.ctaSection}>
+    <section className={styles.ctaSection} id="download">
       <h2 className={styles.ctaTitle}>Free to start</h2>
 
       <p className={styles.ctaDescription}>

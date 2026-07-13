@@ -11,7 +11,8 @@ export function Footer() {
         <p className={styles.copy}>© 2026 Invoya</p>
 
         <nav className={styles.nav} aria-label="Footer navigation">
-          <a href="#">Support</a>
+          <Link href="/">Home</Link>
+          <Link href="/support/">Support</Link>
           <Link href="/privacy/">Privacy</Link>
         </nav>
       </Container>

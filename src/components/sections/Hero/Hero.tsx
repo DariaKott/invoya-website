@@ -22,7 +22,7 @@ export function Hero() {
               into bills — with no account, no signup and no tracking.
             </p>
 
-            <div className={styles.storeLinks} id="download">
+            <div className={styles.storeLinks}>
               <a
                 href="#"
                 className={styles.storeLink}
