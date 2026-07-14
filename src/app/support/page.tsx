@@ -40,7 +40,7 @@ export default function SupportPage() {
 
       <InfoPage
         title="Support"
-        subtitle="Questions, problems and bug reports — I read every one."
+        subtitle="Questions, problems and bug reports — I\u00a0read every one."
       >
         <section>
           <h2>Getting in touch</h2>
