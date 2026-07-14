@@ -60,7 +60,7 @@ export function Hero() {
             <div className={styles.visualFrame}>
               <Image
                 className={styles.visualImage}
-                src={`${basePath}/images/devices/hero-real-dev.png`}
+                src={`${basePath}/images/devices/supernew-real-hero.png`}
                 alt=""
                 width={1536}
                 height={1024}
