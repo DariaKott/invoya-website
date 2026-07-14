@@ -42,10 +42,10 @@ export default function PrivacyPage() {
           <h2>The short version</h2>
           <p>
             Invoya app does not collect your data. There is no Invoya account
-            and no Invoya server. I cannot see your invoices, your clients or
-            your hours, because they never reach me. This website keeps an
-            anonymous count of visits; the app itself reports nothing
-            whatsoever.
+            and no Invoya server. The developer cannot see your invoices, your
+            clients or your hours, because they never leave your devices. This
+            website keeps an anonymous count of visits; the app itself reports
+            nothing whatsoever.
           </p>
         </section>
 
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
             Nothing. The app contains no analytics, no telemetry, no advertising
             and no tracking of any kind. It does not ask you to sign up, and it
             works offline. Nothing you do inside Invoya is measured or reported
-            to anyone — including me.
+            to anyone — including the developer.
           </p>
         </section>
 
@@ -82,8 +82,8 @@ export default function PrivacyPage() {
           <h2>Purchases</h2>
           <p>
             Paid features are sold through the App Store. Purchases and receipts
-            are handled entirely by Apple; I never see your payment details.
-            Apple provides me only with anonymous, aggregated sales reports.
+            are handled entirely by Apple; the developer never sees your payment
+            details. Apple provides only anonymous, aggregated sales reports.
           </p>
         </section>
 
@@ -91,14 +91,22 @@ export default function PrivacyPage() {
           <h2>This website</h2>
           <p>
             This website — and only this website, never the app — counts
-            visitors using Plausible Analytics. It is a privacy-focused,
-            EU-hosted analytics tool that I serve from my own domain. It sets no
-            cookies, stores no personal data, and assigns you no identifier: it
-            counts page views in aggregate, so I can see how many people visited
-            and which pages they read. Visitors are not profiled, not followed
-            across websites, and not identifiable — by me or by anyone else.
-            There is no way to link a visit here to anything you do inside the
-            app, because the app reports nothing at all.
+            visitors using{" "}
+            <a
+              href="https://plausible.io/privacy-focused-web-analytics"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Plausible Analytics
+            </a>
+            . It is a privacy-focused, EU-hosted analytics tool, served from
+            Invoya&apos;s own domain. It sets no cookies, stores no personal
+            data, and assigns you no identifier: it counts page views in
+            aggregate, so the developer can see how many people visited and
+            which pages they read. Visitors are not profiled, not followed
+            across websites, and not identifiable — by the developer or by
+            anyone else. There is no way to link a visit here to anything you do
+            inside the app, because the app reports nothing at all.
           </p>
         </section>
 
@@ -119,12 +127,12 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2>Who I am</h2>
+          <h2>The developer</h2>
           <p>
             Invoya is made by one developer — Aleksandr Gordienko, NIF
-            Z3304393B, Av. Jaume I 95 1r, 08226 Terrassa, Spain. I am the data
-            controller for this website. There is no company behind me, no
-            investors, and nobody whose business model depends on your data.
+            Z3304393B, Av. Jaume I 95 1r, 08226 Terrassa, Spain — who is the
+            data controller for this website. There is no company behind Invoya,
+            no investors, and nobody whose business model depends on your data.
           </p>
 
           <p>

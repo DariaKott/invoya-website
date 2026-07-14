@@ -52,12 +52,12 @@ export default function SupportPage() {
           </p>
 
           <p>
-            Support runs by email. The best way to reach me is from Settings
-            inside the Invoya app — the message it composes carries diagnostic
-            information about your device and app version, which usually turns a
-            long back-and-forth into a single reply. Everything attached is
-            technical; your invoices, clients and hours stay on your device, as
-            always.
+            Support runs by email, in English. The best way to reach me is from
+            Settings inside the Invoya app — the message it composes carries
+            diagnostic information about your device and app version, which
+            usually turns a long back-and-forth into a single reply. Everything
+            attached is technical; your invoices, clients and hours stay on your
+            device, as always.
           </p>
 
           <p>
@@ -84,9 +84,17 @@ export default function SupportPage() {
           <p>
             Sync runs through iCloud, so both devices need to be signed in to
             the same Apple Account with iCloud enabled for Invoya, and to have
-            been online recently. If they are and the data still differs, write
-            in from Settings — the diagnostics tell me what iCloud is reporting
-            on that device, which is exactly what I need to see.
+            been online recently. If they are, give it time — iCloud decides
+            for itself when to push changes, and a sync can take up to fifteen
+            minutes to come through.
+          </p>
+
+          <p>
+            The timing is Apple&apos;s to control, not mine: the app hands your
+            changes to iCloud and iCloud delivers them when it delivers them, so
+            there is little I can do to hurry it along. If the devices still
+            disagree after that, write in from Settings in the app and I&apos;ll
+            take a look.
           </p>
         </section>
 
@@ -136,8 +144,8 @@ export default function SupportPage() {
           <p>
             Purchases are tied to your Apple Account, so make sure you&apos;re
             signed in with the same one you bought with, then restore purchases
-            from Settings in the app. If it still doesn&apos;t appear, get in
-            touch from Settings and I&apos;ll sort it out.
+            from the Add-Ons section of the app. If it still doesn&apos;t
+            appear, get in touch from Settings and I&apos;ll sort it out.
           </p>
         </section>
 
@@ -146,7 +154,10 @@ export default function SupportPage() {
 
           <p>
             Mac, iPhone and iPad — one native app, not a website in a wrapper.
-            The interface is available in several languages.
+            The interface is available in several languages, and I&apos;m
+            working on adding more. If you&apos;d like to see Invoya in your
+            own language and fancy helping with the translation, get in touch —
+            I&apos;d be glad of the help.
           </p>
         </section>
 
@@ -155,11 +166,10 @@ export default function SupportPage() {
 
           <p>
             Send it from Settings in the app. Bug reports arrive with
-            diagnostics attached, which means I can usually reproduce the
-            problem instead of guessing at it. Feature requests are welcome the
-            same way — they genuinely shape what gets built next, and with one
-            person deciding the roadmap, a good idea can ship in the next
-            release.
+            diagnostics attached, which helps the investigation enormously.
+            Feature requests are welcome the same way — they genuinely shape
+            what gets built next, and with one person deciding the roadmap, a
+            good idea can ship in the next release.
           </p>
         </section>
 
