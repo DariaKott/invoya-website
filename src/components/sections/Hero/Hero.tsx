@@ -21,9 +21,8 @@ export function Hero() {
 
             <p className={styles.description}>
               A native invoicing and time-tracking app for Mac, iPhone and iPad.
-              Build PDF invoices, track billable hours, and turn your
-              timesheets into bills — with no account, no signup and no
-              tracking.
+              Build PDF invoices, track billable hours, and turn your timesheets
+              into bills — with no account, no signup and no tracking.
             </p>
 
             <div className={styles.storeLinks}>
@@ -61,7 +60,7 @@ export function Hero() {
             <div className={styles.visualFrame}>
               <Image
                 className={styles.visualImage}
-                src={`${basePath}/images/devices/hero-devices.webp`}
+                src={`${basePath}/images/devices/hero-real-dev.png`}
                 alt=""
                 width={1536}
                 height={1024}

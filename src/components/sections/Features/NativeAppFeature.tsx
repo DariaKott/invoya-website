@@ -9,7 +9,10 @@ export function NativeAppFeature() {
     <section className={`${styles.row} ${styles.reverse}`}>
       <div className={styles.featureContent}>
         <div className={styles.featureHeading}>
-          <div className={`${styles.featureIcon} ${styles.nativeIcon}`} aria-hidden="true">
+          <div
+            className={`${styles.featureIcon} ${styles.nativeIcon}`}
+            aria-hidden="true"
+          >
             <svg
               viewBox="0 0 24 24"
               className={styles.featureIconSvg}
@@ -34,7 +37,7 @@ export function NativeAppFeature() {
 
       <div className={styles.nativeVisual}>
         <Image
-          src={`${basePath}/images/screenshots/one-app.png`}
+          src={`${basePath}/images/screenshots/one-app-dev-with-app.png`}
           alt="Invoya running on Mac, iPad and iPhone"
           width={1536}
           height={1024}
