@@ -28,8 +28,7 @@ export function NativeAppFeature() {
         <p className={styles.featureDescription}>
           Written for Apple platforms rather than wrapped from a website. Start
           an invoice on the Mac, finish it on the iPad, check an hour on your
-          iPhone. Invoya feels at home on every device and stays available
-          wherever you work.
+          iPhone. Available in several languages.
         </p>
       </div>
 

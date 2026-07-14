@@ -316,6 +316,33 @@
   height: 48px;
 }
 
+.ctaNote {
+  max-width: 620px;
+  margin-top: 34px;
+  color: $color-text-secondary;
+  font-family: $font-body;
+  font-size: 15px;
+  line-height: 1.75;
+
+  a {
+    color: $color-primary;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s ease;
+  }
+
+  a:hover {
+    opacity: 0.75;
+  }
+
+  a:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid $color-primary;
+    outline-offset: 4px;
+  }
+}
+
 @include tablet {
   .row {
     gap: 48px;
@@ -471,11 +498,18 @@
 
   .ctaSection {
     padding-top: 48px;
-    padding-bottom: 8px;
+    padding-bottom: 38px;
   }
 
   .ctaDescription {
     max-width: 340px;
+  }
+
+  .ctaNote {
+    max-width: 340px;
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 

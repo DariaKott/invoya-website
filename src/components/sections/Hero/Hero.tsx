@@ -14,12 +14,16 @@ export function Hero() {
           <div className={styles.content}>
             <p className={styles.eyebrow}>Invoicing without the headache</p>
 
-            <h1 className={styles.title}>Invoicing without the headache</h1>
+            <h1 className={styles.title}>
+              <span className={styles.titleAccent}>Invoya</span> - Invoicing
+              without the headache
+            </h1>
 
             <p className={styles.description}>
               A native invoicing and time-tracking app for Mac, iPhone and iPad.
-              Create invoices, track billable hours, and turn your timesheets
-              into bills — with no account, no signup and no tracking.
+              Build PDF invoices, track billable hours, and turn your
+              timesheets into bills — with no account, no signup and no
+              tracking.
             </p>
 
             <div className={styles.storeLinks}>

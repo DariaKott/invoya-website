@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./Features.module.scss";
 
@@ -43,6 +44,13 @@ export function CTAFeature() {
             className={styles.ctaBadge}
           />
         </a>
+      </div>
+
+      <div className={styles.ctaNote}>
+        Invoya is built by one person — no company, no investors, no growth
+        target that your data has to feed. That is why there is no account to
+        create and nothing to upsell you, and why the person who answers{" "}
+        <Link href="/support/">support</Link> is the person who wrote the code.
       </div>
     </section>
   );
