@@ -70,32 +70,30 @@ export function Header() {
             />
           </Link>
 
-          <nav className={styles.nav} aria-label="Main navigation">
-            {sectionLinks.map((link) => (
-              <Link key={link.hash} href={getSectionHref(link.hash)}>
-                {link.label}
-              </Link>
-            ))}
-
-            {pageLinks.map((link) => {
-              const isActive = normalizedPathname === link.href;
-
-              return (
-                <Link
-                  key={link.href}
-                  className={isActive ? styles.active : undefined}
-                  href={link.href}
-                  aria-current={isActive ? "page" : undefined}
-                >
+          <div className={styles.navSlot}>
+            <nav className={styles.nav} aria-label="Main navigation">
+              {sectionLinks.map((link) => (
+                <Link key={link.hash} href={getSectionHref(link.hash)}>
                   {link.label}
                 </Link>
-              );
-            })}
-          </nav>
+              ))}
 
-          <Link className={styles.downloadLink} href={getSectionHref("download")}>
-            Download
-          </Link>
+              {pageLinks.map((link) => {
+                const isActive = normalizedPathname === link.href;
+
+                return (
+                  <Link
+                    key={link.href}
+                    className={isActive ? styles.active : undefined}
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
         </div>
       </Container>
     </header>

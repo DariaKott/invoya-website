@@ -36,11 +36,8 @@
   }
 
   @include mobile {
-    min-height: 116px;
-    flex-wrap: wrap;
+    min-height: 84px;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 8px;
   }
 }
 
@@ -48,16 +45,11 @@
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
-
-  @include mobile {
-    order: 1;
-  }
 }
 
 .nav {
   display: flex;
   align-items: center;
-  margin-left: auto;
   gap: 34px;
 
   a {
@@ -86,12 +78,9 @@
   }
 
   @include mobile {
-    order: 3;
     width: 100%;
-    margin-left: 0;
-    padding-top: 8px;
     justify-content: flex-end;
-    gap: 16px;
+    gap: 18px;
 
     a {
       padding: 10px 0;
@@ -101,6 +90,12 @@
       white-space: nowrap;
     }
   }
+}
+
+.navSlot {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .logoImage {
@@ -117,50 +112,6 @@
   }
 }
 
-.downloadLink {
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  margin-left: 40px;
-  padding: 0 24px;
-  border-radius: 14px;
-  background: $color-primary;
-  color: #ffffff;
-  font-family: $font-body;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover,
-  &:focus-visible {
-    background: #465de0;
-    box-shadow: 0 8px 20px rgba(88, 112, 245, 0.24);
-    transform: translateY(-1px);
-  }
-
-  @include tablet {
-    min-height: 42px;
-    margin-left: 28px;
-    padding: 0 20px;
-    font-size: 14px;
-  }
-
-  @include mobile {
-    order: 2;
-    min-height: 38px;
-    margin-left: auto;
-    padding: 0 17px;
-    border-radius: 12px;
-    font-size: 13px;
-  }
-}
-
 @media (max-width: 360px) {
   .nav {
     gap: 10px;
@@ -168,9 +119,5 @@
     a {
       font-size: 12px;
     }
-  }
-
-  .downloadLink {
-    padding: 0 14px;
   }
 }

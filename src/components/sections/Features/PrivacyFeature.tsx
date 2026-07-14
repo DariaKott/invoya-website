@@ -9,7 +9,10 @@ export function PrivacyFeature() {
     <section className={styles.row}>
       <div className={styles.featureContent}>
         <div className={styles.featureHeading}>
-          <div className={`${styles.featureIcon} ${styles.privacyIcon}`} aria-hidden="true">
+          <div
+            className={`${styles.featureIcon} ${styles.privacyIcon}`}
+            aria-hidden="true"
+          >
             <svg
               viewBox="0 0 24 24"
               className={styles.featureIconSvg}
@@ -21,26 +24,18 @@ export function PrivacyFeature() {
             </svg>
           </div>
 
-          <h2 className={styles.featureTitle}>Your data never leaves your devices</h2>
+          <h2 className={styles.featureTitle}>
+            Your data never leaves your devices
+          </h2>
         </div>
 
         <p className={styles.featureDescription}>
-          There is no Invoya account because there is no Invoya server.
+          There is no Invoya account, because there is no Invoya server. <br />
+          <br /> Your invoices, clients and hours live on your devices and sync
+          through your own private iCloud database, which only you can read.{" "}
           <br />
-          <br />
-          Your invoices, contracts and timesheets stay inside your own private
-          iCloud database that only your Apple devices can access.
-          <br />
-          <br />
-          No analytics.
-          <br />
-          No tracking.
-          <br />
-          No third-party servers.
-          <br />
-          <br />
-          Everything works offline first and synchronizes securely through your
-          own encrypted iCloud storage.
+          <br /> No analytics, no telemetry, no third parties — the app works
+          offline, because it has nowhere else to go.
         </p>
       </div>
 
