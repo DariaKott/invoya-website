@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container/Container";
+import { APP_STORE_URL, MAC_APP_STORE_URL } from "@/constants/links";
 
 import styles from "./Hero.module.scss";
 
@@ -27,9 +28,11 @@ export function Hero() {
 
             <div className={styles.storeLinks}>
               <a
-                href="#"
+                href={APP_STORE_URL}
                 className={styles.storeLink}
                 aria-label="Download Invoya for iPhone and iPad on the App Store"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Image
                   src={`${basePath}/images/badges/app-store-badge.svg`}
@@ -41,9 +44,11 @@ export function Hero() {
               </a>
 
               <a
-                href="#"
+                href={MAC_APP_STORE_URL}
                 className={styles.storeLink}
                 aria-label="Download Invoya for Mac on the Mac App Store"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Image
                   src={`${basePath}/images/badges/mac-app-store-badge.svg`}
@@ -60,7 +65,7 @@ export function Hero() {
             <div className={styles.visualFrame}>
               <Image
                 className={styles.visualImage}
-                src={`${basePath}/images/devices/supernew-real-hero.png`}
+                src={`${basePath}/images/devices/hero_devices.webp`}
                 alt=""
                 width={1536}
                 height={1024}

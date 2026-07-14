@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { APP_STORE_URL, MAC_APP_STORE_URL } from "@/constants/links";
+
 import styles from "./Features.module.scss";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -18,9 +20,11 @@ export function CTAFeature() {
 
       <div className={styles.ctaButtons}>
         <a
-          href="#"
+          href={APP_STORE_URL}
           className={styles.ctaButton}
           aria-label="Download Invoya for iPhone and iPad on the App Store"
+          target="_blank"
+          rel="noreferrer"
         >
           <Image
             src={`${basePath}/images/badges/app-store-badge.svg`}
@@ -32,9 +36,11 @@ export function CTAFeature() {
         </a>
 
         <a
-          href="#"
+          href={MAC_APP_STORE_URL}
           className={styles.ctaButton}
           aria-label="Download Invoya for Mac on the Mac App Store"
+          target="_blank"
+          rel="noreferrer"
         >
           <Image
             src={`${basePath}/images/badges/mac-app-store-badge.svg`}
