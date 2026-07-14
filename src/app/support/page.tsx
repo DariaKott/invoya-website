@@ -5,10 +5,32 @@ import { Footer } from "@/components/layout/Footer/Footer";
 import { Header } from "@/components/layout/Header/Header";
 import { InfoPage } from "@/components/layout/InfoPage/InfoPage";
 
+import { openGraphImage, siteName, twitterImage } from "../seo";
+
 export const metadata: Metadata = {
   title: "Support | Invoya",
   description:
     "Get help with Invoya, iCloud sync, timesheets, purchases and bug reports.",
+  alternates: {
+    canonical: "/support/",
+  },
+  openGraph: {
+    title: "Support | Invoya",
+    description:
+      "Get help with Invoya, iCloud sync, timesheets, purchases and bug reports.",
+    url: "/support/",
+    siteName,
+    locale: "en_US",
+    type: "website",
+    images: [openGraphImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Support | Invoya",
+    description:
+      "Get help with Invoya, iCloud sync, timesheets, purchases and bug reports.",
+    images: [twitterImage],
+  },
 };
 
 export default function SupportPage() {

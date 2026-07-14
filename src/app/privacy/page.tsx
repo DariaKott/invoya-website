@@ -4,10 +4,32 @@ import { Footer } from "@/components/layout/Footer/Footer";
 import { Header } from "@/components/layout/Header/Header";
 import { InfoPage } from "@/components/layout/InfoPage/InfoPage";
 
+import { openGraphImage, siteName, twitterImage } from "../seo";
+
 export const metadata: Metadata = {
   title: "Privacy Policy | Invoya",
   description:
     "Learn how Invoya stores and protects your data and how the Invoya website handles analytics.",
+  alternates: {
+    canonical: "/privacy/",
+  },
+  openGraph: {
+    title: "Privacy Policy | Invoya",
+    description:
+      "Learn how Invoya stores and protects your data and how the Invoya website handles analytics.",
+    url: "/privacy/",
+    siteName,
+    locale: "en_US",
+    type: "website",
+    images: [openGraphImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Invoya",
+    description:
+      "Learn how Invoya stores and protects your data and how the Invoya website handles analytics.",
+    images: [twitterImage],
+  },
 };
 
 export default function PrivacyPage() {
