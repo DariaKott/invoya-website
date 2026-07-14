@@ -9,7 +9,10 @@ export function TimesheetsFeature() {
     <section className={`${styles.row} ${styles.reverse}`}>
       <div className={styles.featureContent}>
         <div className={styles.featureHeading}>
-          <div className={`${styles.featureIcon} ${styles.timeIcon}`} aria-hidden="true">
+          <div
+            className={`${styles.featureIcon} ${styles.timeIcon}`}
+            aria-hidden="true"
+          >
             <svg
               viewBox="0 0 24 24"
               className={styles.featureIconSvg}
@@ -48,7 +51,7 @@ export function TimesheetsFeature() {
 
         <div className={styles.iphoneTimesheetsWrapper}>
           <Image
-            src={`${basePath}/images/screenshots/iphone_timesheets.png`}
+            src={`${basePath}/images/screenshots/iphone_stopTimer_dark1.png`}
             alt="Invoya running timer on iPhone"
             width={1320}
             height={2868}
