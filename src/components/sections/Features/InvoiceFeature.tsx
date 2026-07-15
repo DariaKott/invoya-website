@@ -49,10 +49,10 @@ export function InvoiceFeature() {
 
       <div className={styles.invoiceVisual}>
         <Image
-          src={`${basePath}/images/screenshots/feature-pic.webp`}
+          src={`${basePath}/images/screenshots/pics-firstblock.png`}
           alt="Invoya invoice editor and exported PDF"
-          width={5906}
-          height={3938}
+          width={4762}
+          height={3611}
           className={styles.invoiceImage}
         />
       </div>

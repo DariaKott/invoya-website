@@ -126,50 +126,19 @@
 }
 
 .timesheetsVisual {
-  position: relative;
+  display: flex;
   flex: 1 1 auto;
   min-width: 0;
-  height: 360px;
+  align-items: center;
+  justify-content: center;
 }
 
-.ipadTimesheetsWrapper {
-  position: absolute;
-  inset: 22px 34px 22px 0;
-  overflow: hidden;
-  border-radius: 24px;
-  background: #f7f8fb;
-  box-shadow:
-    0 26px 60px rgba(16, 24, 47, 0.12),
-    0 6px 18px rgba(16, 24, 47, 0.06);
-}
-
-.ipadTimesheetsImage {
+.timesheetsImage {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.iphoneTimesheetsWrapper {
-  position: absolute;
-  right: 0;
-  bottom: -14px;
-  z-index: 2;
-  width: 24%;
-  max-width: 150px;
-  overflow: hidden;
-  border-radius: 28px;
-  background: #ffffff;
-  box-shadow:
-    0 24px 50px rgba(16, 24, 47, 0.18),
-    0 6px 16px rgba(16, 24, 47, 0.08);
-}
-
-.iphoneTimesheetsImage {
-  display: block;
-  width: 100%;
+  max-width: 680px;
   height: auto;
+  object-fit: contain;
 }
 
 .timeIcon {
@@ -336,21 +305,9 @@
     margin-left: 0;
   }
 
-  .timesheetsVisual {
-    height: 320px;
-  }
-
-  .ipadTimesheetsWrapper {
-    inset: 24px 28px 24px 0;
-  }
-
-  .invoiceImage {
+  .invoiceImage,
+  .timesheetsImage {
     max-width: 560px;
-  }
-
-  .iphoneTimesheetsWrapper {
-    width: 25%;
-    max-width: 130px;
   }
 
   .nativeImage {
@@ -419,23 +376,9 @@
     margin-left: 0;
   }
 
-  .timesheetsVisual {
-    height: 320px;
-  }
-
-  .invoiceImage {
+  .invoiceImage,
+  .timesheetsImage {
     max-width: 620px;
-  }
-
-  .ipadTimesheetsWrapper {
-    inset: 12px 26px 20px 0;
-  }
-
-  .iphoneTimesheetsWrapper {
-    right: 0;
-    bottom: -14px;
-    width: 28%;
-    max-width: 128px;
   }
 
   .nativeImage {
@@ -517,24 +460,9 @@
     font-size: 15px;
   }
 
-  .timesheetsVisual {
-    height: 270px;
-  }
-
-  .ipadTimesheetsWrapper {
-    inset: 12px 22px 18px 0;
-    border-radius: 18px;
-  }
-
-  .invoiceImage {
+  .invoiceImage,
+  .timesheetsImage {
     max-width: 100%;
-  }
-
-  .iphoneTimesheetsWrapper {
-    bottom: -8px;
-    width: 29%;
-    max-width: 104px;
-    border-radius: 22px;
   }
 
   .nativeVisual {
@@ -565,12 +493,4 @@
     height: 200px;
   }
 
-  .timesheetsVisual {
-    height: 235px;
-  }
-
-  .iphoneTimesheetsWrapper {
-    width: 30%;
-    max-width: 90px;
-  }
 }
