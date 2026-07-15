@@ -48,32 +48,33 @@ export function InvoiceFeature() {
       </div>
 
       <div className={styles.invoiceVisual}>
-        <div className={styles.ipadImageWrapper}>
+        <div className={styles.macWrapper}>
           <Image
             src={`${basePath}/images/screenshots/mac222.png`}
-            alt="Invoya invoice editor on iPad"
-            width={2048}
-            height={2732}
-            className={styles.ipadImage}
+            alt="Invoya invoice interface on Mac"
+            width={1536}
+            height={1024}
+            className={styles.macImage}
           />
         </div>
 
-        <div className={styles.pdfImageWrapper}>
+        <div className={styles.pdfWrapper}>
           <Image
             src={`${basePath}/images/screenshots/pdf1.png`}
+            alt="PDF invoice exported from Invoya"
+            width={1055}
+            height={1491}
+            className={styles.pdfImage}
+          />
+        </div>
+
+        <div className={styles.iphoneWrapper}>
+          <Image
+            src={`${basePath}/images/screenshots/iphone_invoice_detail.png`}
             alt="Invoya invoice editor on iPhone"
             width={1320}
             height={2868}
             className={styles.iphoneImage}
-          />
-        </div>
-        <div className={styles.iphoneInvoiceWrapper}>
-          <Image
-            src={`${basePath}/images/screenshots/iphone_invoice_detail.png`}
-            alt="Invoya running timer on iPhone"
-            width={1320}
-            height={2868}
-            className={styles.iphoneTimesheetsImage}
           />
         </div>
       </div>
