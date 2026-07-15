@@ -39,25 +39,13 @@ export function TimesheetsFeature() {
       </div>
 
       <div className={styles.timesheetsVisual}>
-        <div className={styles.ipadTimesheetsWrapper}>
-          <Image
-            src={`${basePath}/images/screenshots/ipad_landscape_graf_dark.png`}
-            alt="Invoya timesheets on iPad"
-            width={2752}
-            height={2064}
-            className={styles.ipadTimesheetsImage}
-          />
-        </div>
-
-        <div className={styles.iphoneTimesheetsWrapper}>
-          <Image
-            src={`${basePath}/images/screenshots/iphone_stop_timer_light.png`}
-            alt="Invoya running timer on iPhone"
-            width={1320}
-            height={2868}
-            className={styles.iphoneTimesheetsImage}
-          />
-        </div>
+        <Image
+          src={`${basePath}/images/screenshots/pics-secondblock.png`}
+          alt="Invoya timesheets and timer"
+          width={4275}
+          height={3564}
+          className={styles.timesheetsImage}
+        />
       </div>
     </section>
   );
