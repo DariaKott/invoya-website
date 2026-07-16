@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { type MouseEvent, useEffect, useState } from "react";
 
 import { Container } from "@/components/ui/Container/Container";
 
@@ -32,14 +32,41 @@ const pageLinks = [
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+
   const normalizedPathname =
     basePath && pathname.startsWith(basePath)
       ? pathname.slice(basePath.length) || "/"
       : pathname;
+
   const isLandingPage = normalizedPathname === "/";
 
   const getSectionHref = (hash: string) =>
     isLandingPage ? `#${hash}` : `/#${hash}`;
+
+  const handleSectionClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    hash: string,
+  ) => {
+    if (!isLandingPage) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const section = document.getElementById(hash);
+
+    if (!section) {
+      return;
+    }
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    // Сохраняем якорь в адресной строке без новой записи в истории.
+    window.history.replaceState(null, "", `#${hash}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +74,6 @@ export function Header() {
     };
 
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -73,7 +99,11 @@ export function Header() {
           <div className={styles.navSlot}>
             <nav className={styles.nav} aria-label="Main navigation">
               {sectionLinks.map((link) => (
-                <Link key={link.hash} href={getSectionHref(link.hash)}>
+                <Link
+                  key={link.hash}
+                  href={getSectionHref(link.hash)}
+                  onClick={(event) => handleSectionClick(event, link.hash)}
+                >
                   {link.label}
                 </Link>
               ))}
